@@ -3,7 +3,7 @@
 Copy Paste mcm template for SkyUI
 Includes logic for a bare bones 'addon system' to allow ot her mods to add pages to the main mods mcm
 
-# Add On System (Usage)
+## Add On System (Usage)
 
 Copy the base system into your mcm script and build out the SetPages(), OnConfigInit() and OnPageReset() as usual
 There is nothing more to consider on the main script
