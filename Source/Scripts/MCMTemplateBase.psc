@@ -83,104 +83,154 @@ Event OnPageReset(String asPage)
   EndIf
 EndEvent
 
+; ----------------- State Overrides
+
+Event OnSelectEX()
+EndEvent
+Event OnSliderOpenEX()
+EndEvent
+Event OnSliderAcceptEX(float afValue)
+EndEvent
+Event OnMenuOpenEX()
+EndEvent
+Event OnMenuAcceptEX(int aiIndex)
+EndEvent
+Event OnDefaultEX()
+EndEvent
+Event OnColorOpenEX()
+EndEvent
+Event OnColorAcceptEX(int aiColor)
+EndEvent
+Event OnKeyMapChangeEX(int aiKeyCode, String asConflictControl, String asConflictName)
+EndEvent
+Event OnInputOpenEX()
+EndEvent
+Event OnInputAcceptEX(String asInput)
+EndEvent
+Event OnHighlightEX()
+EndEvent
+
 ; ----------------- Event States
 
 Event OnSelectST()
-	MCMTemplatePage page = GetActivePage()
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnSelectST()
+	Else
+		OnSelectEX()
 	EndIf
 EndEvent
 
 Event OnSliderOpenST()
-	MCMTemplatePage page = GetActivePage()
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnSliderOpenST()
+	Else
+		OnSliderOpenEX()
 	EndIf
 EndEvent
 
-Event OnSliderAcceptST(Float afValue)
-	MCMTemplatePage page = GetActivePage()
+Event OnSliderAcceptST(float afValue)
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnSliderAcceptST(afValue)
+	Else
+		OnSliderAcceptEX(afValue)
 	EndIf
 EndEvent
 
 Event OnMenuOpenST()
-	MCMTemplatePage page = GetActivePage()
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnMenuOpenST()
+	Else
+		OnMenuOpenEX()
 	EndIf
 EndEvent
 
-Event OnMenuAcceptST(Int aiIndex)
-	MCMTemplatePage page = GetActivePage()
+Event OnMenuAcceptST(int aiIndex)
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnMenuAcceptST(aiIndex)
+	Else
+		OnMenuAcceptEX(aiIndex)
 	EndIf
 EndEvent
 
 Event OnDefaultST()
-	MCMTemplatePage page = GetActivePage()
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnDefaultST()
+	Else
+		OnDefaultEX()
 	EndIf
 EndEvent
 
 Event OnColorOpenST()
-	MCMTemplatePage page = GetActivePage()
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnColorOpenST()
+	Else
+		OnColorOpenEX()
 	EndIf
 EndEvent
 
 Event OnColorAcceptST(int aiColor)
-	MCMTemplatePage page = GetActivePage()
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnColorAcceptST(aiColor)
+	Else
+		OnColorAcceptEX(aiColor)
 	EndIf
 EndEvent
 
 Event OnKeyMapChangeST(int aiKeyCode, string asConflictControl, string asConflictName)
-	MCMTemplatePage page = GetActivePage()
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnKeyMapChangeST(aiKeyCode, asConflictControl, asConflictName)
+	Else
+		OnKeyMapChangeEX(aiKeyCode ,asConflictControl, asConflictName)
 	EndIf
 EndEvent
 
 Event OnInputOpenST()
-	MCMTemplatePage page = GetActivePage()
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnInputOpenST()
+	Else
+		OnInputOpenEX()
 	EndIf
 EndEvent
 
-Event OnInputAcceptST(string asInput)
-	MCMTemplatePage page = GetActivePage()
+Event OnInputAcceptST(String asInput)
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnInputAcceptST(asInput)
+	Else
+		OnInputAcceptEX(asInput)
 	EndIf
 EndEvent
 
 Event OnHighlightST()
-	MCMTemplatePage page = GetActivePage()
+	AcheronMCMPage page = GetActivePage()
 	If(page)
 		page.GoToState(GetState())
 		page.OnHighlightST()
+	Else
+		OnHighlightEX()
 	EndIf
 EndEvent
-
 ; ----------------- Legacy Events
 
 Event OnOptionSelect(int aiOption)
