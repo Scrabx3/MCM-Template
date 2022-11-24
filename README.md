@@ -1,7 +1,8 @@
 # MCM-Template
 
-Copy Paste mcm template for SkyUI
-Includes logic for a bare bones 'addon system' to allow mods to integrate new pages to the main mods mcm
+Personal copy-paste MCM template for SkyUI
+
+Includes logic for a basic 'addon system' to allow mods to integrate new pages to the main mods MCM
 
 ## Usage
 
